@@ -12,7 +12,7 @@
 
 <h4>How to Deploy Angular inside .NetCore 10 project</h4>
 <p>1. Navigate to Angular22 root project</p>
-<p>2. Execute in terminal<b/r>
+<p>2. Execute in terminal<br/>
 ng build --configuration=production --base-href=/ </p>
 <p>3. It will create dist folder</p>
 <p>4. Navigate to dist/browser folder and copy all files to .NetCore project wwwroot folder</p>
