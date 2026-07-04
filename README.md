@@ -11,7 +11,7 @@
 
 <h4>How to test and run</h4>
 <p>1. Clone repository link </br>
-https://github.com/xrey77/CORE10-REST-MEMORY-ANGULAR.git
+git clone https://github.com/xrey77/CORE10-REST-MEMORY-ANGULAR.git
 </p>
 <p>2. Navigate to the project root folder</p>
 <p> cd CORE10-REST-MEMORY-ANGULAR/core10_memorycache</p>
