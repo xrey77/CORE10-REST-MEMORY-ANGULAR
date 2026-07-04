@@ -35,6 +35,7 @@ git clone https://github.com/xrey77/CORE10-REST-MEMORY-ANGULAR.git
 <p>2. Navigate to the project root folder</p>
 <p> cd CORE10-REST-MEMORY-ANGULAR/core10_memorycache</p>
 <p>3. Run the project<br/>
+dotnet restore
 dotnet run
 </p>
 <p>4. type in the browser address bar: http://localhost:5084</p>
