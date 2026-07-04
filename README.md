@@ -9,6 +9,15 @@
 <p>node v24.15.0</p>
 <p>npm v11.12.1</p>
 
+
+<h4>How to Deploy Angular inside .NetCore 10 project</h4>
+<p>1. Navigate to Angular22 root project</>
+<p>2. Execute in terminal<b/r>
+ng build --configuration=production --base-href=/
+<p>3. It will create dist folder</>
+<p>4. Navigate to dist/browser folder and copy all files to .NetCore project wwwroot folder</p>
+<p>5. Copy also server folder, faviicon.ico, 3rdpartylicenses.txt and angular22/dist/angular22/prerendered-routes.json
+
 <h4>How to test and run</h4>
 <p>1. Clone repository link </br>
 git clone https://github.com/xrey77/CORE10-REST-MEMORY-ANGULAR.git

@@ -8,15 +8,6 @@ export class Contactservice {
   
   private httpclient = inject(HttpClient); 
   
-  // public sendContactsRequest(contactDtls: any): Observable<Contact> {
-  //   const headers = {
-  //     headers: new HttpHeaders({
-  //       'Content-Type': 'application/json',
-  //     })
-  //   };
-  //   return this.httpclient.post<Contact>("http://localhost:5084/createcontact", contactDtls, headers);
-  // }    
-
   public sendContactsRequest(contactDtls: any): Observable<any> {
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
     return this.httpclient.post<any>("http://localhost:5084/createcontact", contactDtls, { headers });

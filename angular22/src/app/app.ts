@@ -19,7 +19,8 @@ export class App {
 
   message = signal('');
   protected readonly title = signal('angular22');
-  contacts: any;
+  contacts = signal<any[]>([]);
+  
 
   constructor(
     private contactService: Contactservice,
@@ -66,14 +67,11 @@ export class App {
 
   async contactList() {
     this.contactService.sendListRequest().subscribe({
-      next: (res: any) => {
-        this.contacts = res;
-        this.message.set(res.message);
+      next: (data: any) => {
+        this.contacts.set(data);
       },
       error: (err: any) => {
-        const errorMessage = err.error?.message || 'An error occurred';
-        this.message.set(errorMessage);        
-        window.setTimeout(() => { this.message.set(''); }, 3000);
+        console.error('Failed to fetch contacts', err);
       }
     });
   }
