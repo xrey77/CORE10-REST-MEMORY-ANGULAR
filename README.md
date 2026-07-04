@@ -19,6 +19,15 @@ ng build --configuration=production --base-href=/
 <p>5. Copy also server folder, faviicon.ico, 3rdpartylicenses.txt and angular22/dist/angular22/prerendered-routes.json
 
 <h4>How to test and run</h4>
+<p>1. From project root directory, navigate to test folder, the run below:
+<p>Delete bin and obj folder first <br/>
+rm -rf bin/ obj/
+</p>
+<p>dotnet restore</p>
+<p>dotnet test</p>
+
+
+<h4>How to run project and access it in the browser</h4>
 <p>1. Clone repository link </br>
 git clone https://github.com/xrey77/CORE10-REST-MEMORY-ANGULAR.git
 </p>
@@ -27,3 +36,4 @@ git clone https://github.com/xrey77/CORE10-REST-MEMORY-ANGULAR.git
 <p>3. Run the project<br/>
 dotnet run
 </p>
+<p>4. type in browser: http://localhost:5084</p>

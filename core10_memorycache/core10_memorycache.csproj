@@ -2,13 +2,28 @@
 
   <PropertyGroup>
     <TargetFramework>net10.0</TargetFramework>
+    <IsTestingPlatformApplication>false</IsTestingPlatformApplication>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
+
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <RootNamespace>core10_memorycache</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="BCrypt.Net-Next" Version="4.2.0" />
+      <InternalsVisibleTo Include="tests" />
+  </ItemGroup>
+
+  <ItemGroup>
+      <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleTo">
+          <_Parameter1>tests</_Parameter1>
+      </AssemblyAttribute>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="10.0.9" />
+    <PackageReference Include="xunit" Version="2.9.2" />
   </ItemGroup>
 
 </Project>
