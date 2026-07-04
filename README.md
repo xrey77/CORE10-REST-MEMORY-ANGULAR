@@ -6,7 +6,7 @@
 
 <h4>Angular CLI 22 Key Release Details and dependencies</h4>
 <p>Angular CLI 22.0.O</p>
-<p><Tailwind CSS/p>
+<p>Tailwind CSS</p>
 <p>node v24.15.0</p>
 <p>npm v11.12.1</p>
 
