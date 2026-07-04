@@ -1,0 +1,19 @@
+<div id="messagebox" class="fixed inset-0 z-[100] flex items-center justify-center bg-black/50 backdrop-transparent-sm">
+  <div class="bg-red-800 p-8 rounded-lg shadow-xl max-w-md w-full mx-4">
+    
+    <div class="xtop flex items-center justify-between mb-6">
+      <h2 class="text-white text-xl font-bold">Confirmation Message</h2>
+
+      <button (click)="cancelDelete($event)" type="button" class="text-slate-400 hover:text-white transition-colors">
+        <svg xmlns="http://w3.org" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+
+    </div>
+        <div class="text-center text-white mb-3">Are you sure you want to delete Contact ID No. {{userid()}} ?</div><br/>
+        <button (click)="confirmationMessage($event)" type="button" class="bg-white mt-2 hover:bg-white-700 text-black font-semibold py-2 px-4 rounded-md transition-colors duration-200">
+        Delete
+        </button>
+  </div>
+</div>

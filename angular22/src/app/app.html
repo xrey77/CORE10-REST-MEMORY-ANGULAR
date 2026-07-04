@@ -1,0 +1,45 @@
+<div class="overflow-x-auto mt-8 mb-8 ml-4 mr-4">
+<h1 class="text-2xl font-extrabold text-gray-900 tracking-tight">
+  User's Master List
+</h1>
+<button type="button" (click)="addHandler($event)" class="px-4 py-2 mb-2 bg-green-600 text-white font-semibold rounded-lg shadow-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:ring-opacity-75">
+  Add new contact
+</button>
+
+<table class="min-w-full border-collapse border border-slate-300 bg-white text-left text-sm shadow-sm">
+    <thead class="bg-slate-100">
+      <tr>
+        <th class="border border-slate-300 p-4 font-semibold text-slate-700">Id</th>
+        <th class="border border-slate-300 p-4 font-semibold text-slate-700">Firstname</th>
+        <th class="border border-slate-300 p-4 font-semibold text-slate-700">Lastname</th>
+        <th class="border border-slate-300 p-4 w-100 font-semibold text-slate-700">Email</th>
+        <th class="border border-slate-300 p-4 font-semibold text-slate-700">Mobile</th>
+        <th class="border border-slate-300 p-4 w-22  font-semibold text-slate-700">&nbsp;</th>
+      </tr>
+    </thead>
+    <tbody class="divide-y divide-slate-200">
+
+      @for (contact of contacts; track contact.id) {
+        <tr class="hover:bg-slate-50">
+            <td class="border border-slate-300 p-4 text-slate-600">{{contact.id}}</td>
+            <td class="border border-slate-300 p-4 text-slate-600">{{contact.firstname}}</td>
+            <td class="border border-slate-300 p-4 text-slate-600">{{contact.lastname}}</td>
+            <td class="border border-slate-300 p-4 w-100 text-slate-600">{{contact.email}}</td>
+            <td class="border border-slate-300 p-4 text-slate-600">{{contact.mobile}}</td>
+            <td class="border border-slate-300 text-slate-600 w-22 flex justify-center items-center">
+              <button type="button" (click)="delHandler(contact.id, contact.email)" class="px-4 py-2 bg-red-600 text-white font-semibold rounded-lg shadow-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:ring-opacity-75">Delete</button>
+            </td>
+          </tr>
+        }
+
+    </tbody>
+  </table>
+</div>
+
+@if (isAddContact() == true ) {
+  <app-addcontact></app-addcontact>
+}
+
+@if (isDeleteContact() == true) {
+  <app-messagebox></app-messagebox>
+}

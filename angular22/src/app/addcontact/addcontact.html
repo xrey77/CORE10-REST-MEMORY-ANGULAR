@@ -1,0 +1,67 @@
+<div class="fixed inset-0 z-[100] flex items-center justify-center bg-black/50 backdrop-transparent-sm">
+  <div class="bg-slate-800 p-8 rounded-lg shadow-xl max-w-md w-full mx-4">
+    
+    <div class="xtop flex items-center justify-between mb-6">
+      <h2 class="text-white text-xl font-bold">Add new contact</h2>
+
+      <button (click)="cancelContacts($event)" type="button" class="text-slate-400 hover:text-white transition-colors">
+        <svg xmlns="http://w3.org" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+
+    </div>
+
+
+
+    <form [formGroup]="contactsForm" (ngSubmit)="submitContacts($event)" novalidate autocomplete="off">
+
+    <input 
+        type="text" 
+        autofocus="true"
+        name="firstname" 
+        formControlName="firstname"
+        required
+        placeholder="enter Firstname" 
+        class="w-full mb-1 bg-transparent placeholder:text-slate-400 text-white text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow"
+    />
+
+    <input 
+        type="text" 
+        name`="lastname" 
+        formControlName="lastname"
+        required
+        placeholder="enter Lastname" 
+        class="w-full mb-1 bg-transparent placeholder:text-slate-400 text-white text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow"
+    />
+
+    <input 
+        type="email" 
+        name="email" 
+        formControlName="email"
+        required
+        placeholder="enter Email Address" 
+        class="w-full mb-1 bg-transparent placeholder:text-slate-400 text-white text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow"
+    />
+
+    <input 
+        type="text" 
+        name="mobile" 
+        formControlName="mobile"
+        required
+        placeholder="enter Mobile No." 
+        class="w-full mb-1 bg-transparent placeholder:text-slate-400 text-white text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow"
+    />
+
+    <button type="submit" class="bg-white mt-2 hover:bg-white-700 text-black font-semibold py-2 px-4 rounded-md transition-colors duration-200">
+     save
+    </button>
+    <button (click)="resetContacts($event)" type="button" formnovalidate  class="bg-sky-200 mx-1 mt-2  text-black font-semibold py-2 px-4 rounded-md transition-colors duration-200">
+     Reset
+    </button>
+
+    </form>     
+
+    <div class="text-center text-yellow-200 mt-5">{{message()}}</div>
+  </div>
+</div>
