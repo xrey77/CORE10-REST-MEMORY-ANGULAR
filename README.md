@@ -41,5 +41,14 @@ dotnet run
 
 <h4>How to test in Postman</h4>
 <p>POST Request     : http://localhost:5084/createcontact</p>
-<p>DELETE Request   : http://localhost:5084/deletecontact</p>
+<p>
+{
+    "firstname": "xxxx",
+    "lastname": "xxxx",
+    "email": "xxxxx",
+    "mobile": "xxxx"    
+}
+</p>
+
+<p>DELETE Request   : http://localhost:5084/deletecontact/xxx@yahoo.com</p>
 <p>GET Request      : http://localhost:5084/getallcontacts</p>
