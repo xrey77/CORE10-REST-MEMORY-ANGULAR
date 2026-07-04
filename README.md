@@ -19,7 +19,7 @@ ng build --configuration=production --base-href=/ </p>
 <p>5. Copy also server folder, faviicon.ico, 3rdpartylicenses.txt and angular22/dist/angular22/prerendered-routes.json</p>
 
 <h4>How to test and run</h4>
-<p>1. From project root directory, navigate to test folder, the run below:</p>
+<p>1. From project root directory, navigate to test folder, then run below:</p>
 <p>Delete bin and obj folder first <br/>
 rm -rf bin/ obj/
 </p>
@@ -36,4 +36,10 @@ git clone https://github.com/xrey77/CORE10-REST-MEMORY-ANGULAR.git
 <p>3. Run the project<br/>
 dotnet run
 </p>
-<p>4. type in browser: http://localhost:5084</p>
+<p>4. type in the browser address bar: http://localhost:5084</p>
+
+
+<h4>How to test in Postman</h4>
+<p>POST Request     : http://localhost:5084/createcontact</p>
+<p>DELETE Request   : http://localhost:5084/deletecontact</p>
+<p>GET Request      : http://localhost:5084/getallcontacts</p>
