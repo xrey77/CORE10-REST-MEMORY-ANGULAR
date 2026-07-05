@@ -28,6 +28,8 @@ export class Messagebox {
     this.contactService.sendDeleteRequest(this.emailadd()).subscribe({
       next: (res: any) => {
         this.message.set(res.message);
+        sessionStorage.removeItem("USERID");
+        sessionStorage.removeItem("EMAIL");        
         location.reload();
       },
       error: (err: any) => {
@@ -40,7 +42,8 @@ export class Messagebox {
 
   cancelDelete(event: MouseEvent) {
     event.stopPropagation();
-    
+    sessionStorage.removeItem("USERID");
+    sessionStorage.removeItem("EMAIL");    
     location.reload();
   }
 }
