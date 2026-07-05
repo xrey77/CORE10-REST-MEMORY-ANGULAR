@@ -35,5 +35,5 @@ app.MapFallbackToFile("{*path:nonfile}", "index.html");
 
 app.Run();
 
-public partial class Program { }
+// public partial class Program { }
 
